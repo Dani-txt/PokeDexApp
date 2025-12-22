@@ -1,6 +1,6 @@
 package com.example.pokedex.data.remote.dto
 
-data class User(
+data class UserDto(
     val uid: String,
     val username: String,
     val email: String,

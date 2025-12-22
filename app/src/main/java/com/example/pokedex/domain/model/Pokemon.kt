@@ -1,4 +1,4 @@
-package com.example.pokedex.data.remote.dto
+package com.example.pokedex.domain.model
 
 data class Pokemon(
     val id: Int,

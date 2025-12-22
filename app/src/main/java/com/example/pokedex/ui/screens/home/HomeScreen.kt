@@ -1,4 +1,4 @@
-package com.example.pokedex.ui.screens
+package com.example.pokedex.ui.screens.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button

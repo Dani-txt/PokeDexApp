@@ -2,7 +2,7 @@ package com.example.pokedex.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.pokedex.data.remote.dto.Pokemon
+import com.example.pokedex.domain.model.Pokemon
 import com.example.pokedex.data.repository.PokemonRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
