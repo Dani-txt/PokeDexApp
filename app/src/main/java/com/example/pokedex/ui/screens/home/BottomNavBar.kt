@@ -49,7 +49,7 @@ fun BottomNavBar(
             ) {
                 IconButton(onClick = onHomeClick) {
                     Icon(
-                        painter = painterResource(R.drawable.btn_1),
+                        painter = painterResource(R.drawable.bottom_bar),
                         contentDescription = "Inicio",
                         tint = Color.White,
                         modifier = Modifier.size(24.dp)
@@ -58,7 +58,7 @@ fun BottomNavBar(
 
                 IconButton(onClick = onCartClick) {
                     Icon(
-                        painter = painterResource(R.drawable.),
+                        painter = painterResource(R.drawable.bottom_bar),
                         contentDescription = "Pokémon",
                         tint = Color.White,
                         modifier = Modifier.size(24.dp)
@@ -67,7 +67,7 @@ fun BottomNavBar(
 
                 IconButton(onClick = onProfileClick) {
                     Icon(
-                        painter = painterResource(R.drawable.btn_4),
+                        painter = painterResource(R.drawable.bottom_bar),
                         contentDescription = "Perfil",
                         tint = Color.White,
                         modifier = Modifier.size(24.dp)
