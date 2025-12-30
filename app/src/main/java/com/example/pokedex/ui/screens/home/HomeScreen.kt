@@ -15,34 +15,22 @@ import com.example.pokedex.navigation.Routes
 @Composable
 fun HomeScreen(navController: NavHostController) {
 
-    Scaffold(
-        bottomBar = {
-            BottomNavBar(
-                onHomeClick = { navController.navigate(Routes.HOME) },
-                onCartClick = { navController.navigate(Routes.region("kanto")) },
-                onProfileClick = { /* más adelante */ }
-            )
-        }
-    ) { padding ->
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
 
-        Column(
-            modifier = Modifier
-                .padding(padding)
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text("Selecciona una región")
+        Text("Selecciona una región")
 
-            listOf("kanto","johto","hoenn","sinnoh","unova","kalos","alola","galar")
-                .forEach { region ->
-                    Button(onClick = {
-                        navController.navigate(Routes.region(region))
-                    }) {
-                        Text(region.replaceFirstChar { it.uppercase() })
-                    }
+        listOf("kanto","johto","hoenn","sinnoh","unova","kalos","alola","galar")
+            .forEach { region ->
+                Button(onClick = { navController.navigate(Routes.region(region)) }) {
+                    Text(region.replaceFirstChar { it.uppercase() })
                 }
-        }
+            }
     }
 }
+
+
 
 

@@ -10,10 +10,14 @@ import retrofit2.http.Query
 
 interface PokeApiService {
 
-    @GET("region/{region}")
-    suspend fun getRegion(@Path("region") region: String): RegionResponse
+    @GET("region/{id}")
+    suspend fun getRegion(@Path("id") id: String): RegionResponse
 
     @GET("pokedex/{id}")
     suspend fun getPokedex(@Path("id") id: String): PokedexResponse
+
+    @GET("pokemon/{name}")
+    suspend fun getPokemon(@Path("name") name: String): PokemonDto
 }
+
 

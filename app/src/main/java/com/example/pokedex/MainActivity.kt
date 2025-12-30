@@ -9,28 +9,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
+import com.example.pokedex.di.AppScaffold
 import com.example.pokedex.navigation.NavGraph
 import com.example.pokedex.ui.theme.PokeDexTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            PokeDexTheme {
-                val navController = rememberNavController()
-
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    androidx.compose.foundation.layout.Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(innerPadding)
-                    ) {
-                        NavGraph(navController = navController)
-                    }
-                }
-            }
-        }
+        setContent { PokeDexTheme { AppScaffold() } }
     }
 }
+
 
